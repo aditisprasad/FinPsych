@@ -17,7 +17,7 @@ import {
 } from 'recharts';
 import AuthPage from './AuthPage';
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_URL = 'https://finpsych.onrender.com';;
 const COLORS = ['#64c8ff', '#43c6ac', '#ffbb28', '#ff8042', '#a259ff', '#ff5252', '#69f0ae'];
 
 const defaultForm = {
