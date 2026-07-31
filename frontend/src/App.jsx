@@ -17,7 +17,7 @@ import {
 } from 'recharts';
 import AuthPage from './AuthPage';
 
-const API_BASE_URL = 'https://finpsych.onrender.com';
+const API_URL = 'https://finpsych.onrender.com';
 const COLORS = ['#64c8ff', '#43c6ac', '#ffbb28', '#ff8042', '#a259ff', '#ff5252', '#69f0ae'];
 
 const defaultForm = {
@@ -38,7 +38,7 @@ function formatCurrency(value) {
 
 function buildApiUrl(path, email) {
   const separator = path.includes('?') ? '&' : '?';
-  return `${API_BASE_URL}${path}${separator}email=${encodeURIComponent(email)}`;
+  return `${API_URL}${path}${separator}email=${encodeURIComponent(email)}`;
 }
 
 function App() {
