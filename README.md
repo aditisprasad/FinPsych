@@ -176,7 +176,7 @@ FinPysch/
    ```bash
    uvicorn main:app --reload --port 8000
    ```
-   The backend API will be live at `http://127.0.0.1:8000`.
+   The backend API will be live at `https://finpsych.onrender.com/`.
 
 ### Frontend Setup
 1. Open a new terminal and navigate to the `frontend` directory:
@@ -191,7 +191,7 @@ FinPysch/
    ```bash
    npm run dev
    ```
-4. Access the web application in your browser at `http://localhost:5173`.
+4. Access the web application in your browser at `https://fin-psych.vercel.app/`.
 
 ---
 
