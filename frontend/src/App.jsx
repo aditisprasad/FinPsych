@@ -16,8 +16,8 @@ import {
   YAxis,
 } from 'recharts';
 import AuthPage from './AuthPage';
+import { buildApiUrl } from './config/api';
 
-const API_URL = 'https://finpsych.onrender.com';
 const COLORS = ['#64c8ff', '#43c6ac', '#ffbb28', '#ff8042', '#a259ff', '#ff5252', '#69f0ae'];
 
 const defaultForm = {
@@ -34,11 +34,6 @@ function formatCurrency(value) {
     currency: 'INR',
     maximumFractionDigits: 0,
   }).format(value || 0);
-}
-
-function buildApiUrl(path, email) {
-  const separator = path.includes('?') ? '&' : '?';
-  return `${API_URL}${path}${separator}email=${encodeURIComponent(email)}`;
 }
 
 function App() {
@@ -191,7 +186,7 @@ function App() {
 
     try {
       const endpoint = authMode === 'register' ? '/api/auth/register' : '/api/auth/login';
-      const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      const response = await fetch(buildApiUrl(endpoint), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(authForm),
